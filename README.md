@@ -65,28 +65,12 @@ petshop-projeto/
 
 ## 5. Links do Projeto
 
-> **Atenção:** substitua os links abaixo pelos endereços reais após criar o repositório no
-> GitHub e ativar o GitHub Pages.
-
 - **Repositório no GitHub (código-fonte HTML):**
-  `https://github.com/SEU-USUARIO/petshop-projeto`
+  `https://github.com/Berllp/petshop-projeto`
 
 - **Sistema publicado (GitHub Pages):**
-  `https://SEU-USUARIO.github.io/petshop-projeto/`
+  `https://Berllp.github.io/petshop-projeto/`
 
-### Como publicar no GitHub Pages (resumo)
-
-1. Crie uma conta no GitHub (caso ainda não tenha) em https://github.com.
-2. Crie um novo repositório público, por exemplo `petshop-projeto`.
-3. Faça o upload de todos os arquivos deste projeto (`index.html`, `produtos.html`,
-   `servicos.html`, `contato.html`, `ajuda.html`, `README.md`) para o repositório.
-4. No repositório, acesse **Settings > Pages**.
-5. Em "Build and deployment", selecione a branch `main` (ou `master`) e a pasta `/root`, depois
-   clique em **Save**.
-6. Aguarde alguns minutos e acesse o link gerado (formato
-   `https://SEU-USUARIO.github.io/petshop-projeto/`) para visualizar o site publicado.
-7. Mais detalhes em:
-   https://docs.github.com/pt/pages/getting-started-with-github-pages/creating-a-github-pages-site
 
 ## 6. Observações sobre esta fase
 
