@@ -4,114 +4,130 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Serviços - Pet Feliz Petshop</title>
+    <meta name="description" content="Serviços do Pet Feliz Petshop: banho e tosa, com agendamento por tele-busca ou entrega no local.">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
 
+    <a class="skip-link" href="#conteudo-principal">Pular para o conteúdo principal</a>
+
     <header>
-        <h1>Pet Feliz Petshop</h1>
-        <p>Cuidando do seu melhor amigo com amor e dedicação desde 2010</p>
-        <nav>
-            <a href="index.html">Início</a> |
-            <a href="produtos.html">Produtos</a> |
-            <a href="servicos.html">Serviços</a> |
-            <a href="contato.html">Contato</a> |
-            <a href="ajuda.html">Ajuda</a>
+        <div class="topbar py-1">
+            <div class="container d-flex flex-wrap justify-content-between">
+                <span id="pf-saudacao">Seja bem-vindo(a) ao Pet Feliz.</span>
+                <span>Telefone: (51) 3222-4455 | <a href="mailto:contato@petfeliz.com.br">contato@petfeliz.com.br</a></span>
+            </div>
+        </div>
+
+        <nav class="navbar navbar-expand-lg navbar-pf" aria-label="Menu principal">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">🐾 Pet Feliz Petshop</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#menuPrincipal" aria-controls="menuPrincipal"
+                        aria-expanded="false" aria-label="Abrir/fechar menu de navegação">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="menuPrincipal">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+                        <li class="nav-item"><a class="nav-link" href="produtos.html">Produtos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="servicos.html">Serviços</a></li>
+                        <li class="nav-item"><a class="nav-link" href="agendamento.html">Agendamento</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
+                        <li class="nav-item"><a class="nav-link" href="ajuda.html">Ajuda</a></li>
+                    </ul>
+                </div>
+            </div>
         </nav>
-        <hr>
     </header>
 
-    <main>
-        <h2>Nossos Serviços</h2>
-        <p>
-            Conheça os serviços oferecidos pelo Pet Feliz. Para cada serviço informamos a descrição,
-            o valor e se há disponibilidade de tele-busca (retirada e entrega do pet na casa do
-            cliente).
-        </p>
+    <main id="conteudo-principal">
+        <div class="container my-5">
+            <h1 class="pf-section-title">Nossos Serviços</h1>
+            <p>
+                O Pet Feliz oferece dois serviços principais: <strong>banho</strong> e <strong>tosa</strong>.
+                Ambos podem ser agendados pela nossa página de
+                <a href="agendamento.html">Agendamento</a>, escolhendo entre tele-busca (buscamos e
+                entregamos o pet em casa) ou entrega do pet diretamente na loja.
+            </p>
 
-        <table border="1">
-            <thead>
-                <tr>
-                    <th>Serviço</th>
-                    <th>Descrição</th>
-                    <th>Valor</th>
-                    <th>Tele-busca</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Banho e Tosa Completa</td>
-                    <td>Banho com produtos hipoalergênicos, tosa higiênica, corte de unhas e limpeza de ouvidos.</td>
-                    <td>R$ 79,90</td>
-                    <td>Sim</td>
-                </tr>
-                <tr>
-                    <td>Consulta Veterinária</td>
-                    <td>Consulta clínica geral com veterinário para avaliação da saúde do animal.</td>
-                    <td>R$ 120,00</td>
-                    <td>Não</td>
-                </tr>
-                <tr>
-                    <td>Hotel para Pets (diária)</td>
-                    <td>Hospedagem para o pet com alimentação, recreação e monitoramento durante viagens do tutor.</td>
-                    <td>R$ 89,90</td>
-                    <td>Sim</td>
-                </tr>
-                <tr>
-                    <td>Adestramento Básico (sessão)</td>
-                    <td>Sessão individual de adestramento comportamental básico com profissional especializado.</td>
-                    <td>R$ 99,90</td>
-                    <td>Não</td>
-                </tr>
-            </tbody>
-        </table>
+            <!-- Tabela com <caption> e scope nas colunas: melhora a leitura
+                 por leitores de tela (requisito de acessibilidade). -->
+            <div class="table-responsive mb-4">
+                <table class="table table-bordered align-middle bg-white">
+                    <caption>Serviços disponíveis para agendamento no Pet Feliz Petshop</caption>
+                    <thead class="table-light">
+                        <tr>
+                            <th scope="col">Serviço</th>
+                            <th scope="col">Descrição</th>
+                            <th scope="col">Valor</th>
+                            <th scope="col">Tele-busca</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Banho</th>
+                            <td>Banho completo com produtos hipoalergênicos, secagem e escovação, além de limpeza de ouvidos.</td>
+                            <td>R$ 59,90</td>
+                            <td>Sim</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Tosa</th>
+                            <td>Tosa higiênica ou na tesoura, de acordo com a raça e o porte do animal, incluindo corte de unhas.</td>
+                            <td>R$ 69,90</td>
+                            <td>Sim</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
-        <section>
-            <h3>Detalhamento dos serviços</h3>
+            <div class="text-center mb-5">
+                <a href="agendamento.html" class="btn btn-pf-accent btn-lg">Agendar banho ou tosa</a>
+            </div>
 
-            <article>
-                <h4>Banho e Tosa Completa</h4>
-                <p>Descrição: Banho com produtos hipoalergênicos, tosa higiênica, corte de unhas e limpeza de ouvidos.</p>
-                <p>Valor: R$ 79,90</p>
-                <p>Tele-busca: Sim, buscamos e entregamos o pet na sua residência.</p>
-            </article>
-
-            <article>
-                <h4>Consulta Veterinária</h4>
-                <p>Descrição: Consulta clínica geral com veterinário para avaliação da saúde do animal.</p>
-                <p>Valor: R$ 120,00</p>
-                <p>Tele-busca: Não disponível para este serviço.</p>
-            </article>
-
-            <article>
-                <h4>Hotel para Pets (diária)</h4>
-                <p>Descrição: Hospedagem para o pet com alimentação, recreação e monitoramento durante viagens do tutor.</p>
-                <p>Valor: R$ 89,90</p>
-                <p>Tele-busca: Sim, buscamos e entregamos o pet na sua residência.</p>
-            </article>
-
-            <article>
-                <h4>Adestramento Básico (sessão)</h4>
-                <p>Descrição: Sessão individual de adestramento comportamental básico com profissional especializado.</p>
-                <p>Valor: R$ 99,90</p>
-                <p>Tele-busca: Não disponível para este serviço.</p>
-            </article>
-        </section>
+            <section>
+                <h2 class="h5">Como funciona o agendamento</h2>
+                <ul>
+                    <li><strong>Entrega no local:</strong> você mesmo traz o pet até o petshop no dia e horário marcados.</li>
+                    <li><strong>Tele-busca:</strong> nossa equipe busca o pet no endereço informado e o devolve após o serviço, também no dia e horário marcados.</li>
+                </ul>
+            </section>
+        </div>
     </main>
 
-    <footer>
-        <hr>
-        <p>Pet Feliz Petshop - CNPJ: 00.000.000/0001-00</p>
-        <p>Rua das Flores, 123 - Centro - Bagé/RS - CEP 96400-000</p>
-        <p>Telefone: (51) 3222-4455 | E-mail: contato@petfeliz.com.br</p>
-        <nav>
-            <a href="index.html">Início</a> |
-            <a href="produtos.html">Produtos</a> |
-            <a href="servicos.html">Serviços</a> |
-            <a href="contato.html">Contato</a> |
-            <a href="ajuda.html">Ajuda</a>
-        </nav>
-        <p>&copy; 2026 Pet Feliz Petshop. Projeto acadêmico desenvolvido para a Disciplina - Fase 1 (somente HTML).</p>
+    <footer class="pf-footer py-4 mt-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <h2 class="h5 text-white">Pet Feliz Petshop</h2>
+                    <p class="mb-1">CNPJ: 00.000.000/0001-00</p>
+                    <p class="mb-0">Rua das Flores, 123 - Centro - Bagé/RS - CEP 96400-000</p>
+                </div>
+                <div class="col-md-4">
+                    <h2 class="h5 text-white">Contato</h2>
+                    <p class="mb-1">Telefone: (51) 3222-4455</p>
+                    <p class="mb-0">E-mail: <a href="mailto:contato@petfeliz.com.br">contato@petfeliz.com.br</a></p>
+                </div>
+                <div class="col-md-4">
+                    <h2 class="h5 text-white">Navegação</h2>
+                    <nav aria-label="Links do rodapé">
+                        <a href="index.html">Início</a> ·
+                        <a href="produtos.html">Produtos</a> ·
+                        <a href="servicos.html">Serviços</a> ·
+                        <a href="agendamento.html">Agendamento</a> ·
+                        <a href="contato.html">Contato</a> ·
+                        <a href="ajuda.html">Ajuda</a>
+                    </nav>
+                </div>
+            </div>
+            <hr class="border-light">
+            <p class="mb-0 text-center">&copy; <span id="pf-ano">2026</span> Pet Feliz Petshop. Projeto acadêmico desenvolvido para a Disciplina - Fase 2.</p>
+        </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

@@ -1,0 +1,296 @@
+/* ==========================================================================
+   Pet Feliz Petshop - Folha de estilos personalizada (Fase 2)
+   Este arquivo complementa o Bootstrap 5 (carregado via CDN nas páginas
+   HTML). Aqui ficam apenas as customizações de marca: cores, tipografia,
+   cabeçalho, rodapé, carrossel, cartões e formulário de agendamento.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Fontes e variáveis de marca (design tokens)
+   -------------------------------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito+Sans:wght@400;600;700&display=swap');
+
+:root {
+  /* Paleta de cores do Pet Feliz */
+  --pf-bg: #fbf7ef;              /* fundo geral, creme suave */
+  --pf-primary: #2a6f63;         /* verde petróleo - identidade principal */
+  --pf-primary-dark: #1d4e45;    /* verde petróleo escuro - hover/contraste */
+  --pf-accent: #f2a65a;          /* laranja amanteigado - destaque/CTA */
+  --pf-accent-dark: #d98a3d;     /* laranja escuro - hover do destaque */
+  --pf-text: #2b2b2b;            /* texto principal */
+  --pf-muted: #63625d;           /* texto secundário */
+  --pf-card-bg: #ffffff;         /* fundo dos cartões */
+  --pf-border: #e4ddcd;          /* bordas suaves */
+
+  /* Tipografia */
+  --pf-font-display: 'Fredoka', 'Segoe UI', sans-serif;   /* títulos */
+  --pf-font-body: 'Nunito Sans', 'Segoe UI', sans-serif;  /* texto corrido */
+}
+
+/* --------------------------------------------------------------------------
+   2. Reset leve e base
+   -------------------------------------------------------------------------- */
+body {
+  background-color: var(--pf-bg);
+  color: var(--pf-text);
+  font-family: var(--pf-font-body);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, .brand-font {
+  font-family: var(--pf-font-display);
+  font-weight: 600;
+  color: var(--pf-primary-dark);
+}
+
+a {
+  color: var(--pf-primary);
+}
+
+a:hover,
+a:focus {
+  color: var(--pf-primary-dark);
+}
+
+/* Mantém o contorno de foco visível para navegação por teclado
+   (requisito de acessibilidade - nunca usar outline: none) */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+.btn:focus-visible {
+  outline: 3px solid var(--pf-accent-dark);
+  outline-offset: 2px;
+}
+
+/* --------------------------------------------------------------------------
+   3. Link "Pular para o conteúdo" (acessibilidade para leitores de tela
+   e navegação por teclado - fica invisível até receber foco)
+   -------------------------------------------------------------------------- */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: auto;
+  background: var(--pf-primary-dark);
+  color: #fff;
+  padding: 0.75rem 1.25rem;
+  z-index: 2000;
+  border-radius: 0 0 0.5rem 0;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  left: 0;
+  top: 0;
+}
+
+/* --------------------------------------------------------------------------
+   4. Barra superior e cabeçalho (header)
+   -------------------------------------------------------------------------- */
+.topbar {
+  background-color: var(--pf-primary-dark);
+  color: #f4efe4;
+  font-size: 0.85rem;
+}
+
+.topbar a {
+  color: #f4efe4;
+  text-decoration: none;
+}
+
+.topbar a:hover {
+  text-decoration: underline;
+}
+
+.navbar-pf {
+  background-color: var(--pf-primary);
+}
+
+.navbar-pf .navbar-brand {
+  font-family: var(--pf-font-display);
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.navbar-pf .nav-link {
+  color: #eafaf5;
+  font-weight: 600;
+}
+
+.navbar-pf .nav-link.active,
+.navbar-pf .nav-link:hover {
+  color: var(--pf-accent);
+}
+
+/* --------------------------------------------------------------------------
+   5. Carrossel da página inicial
+   -------------------------------------------------------------------------- */
+.pf-carousel .carousel-item {
+  height: 420px;
+  background-color: var(--pf-primary-dark);
+}
+
+.pf-carousel .carousel-item img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  opacity: 0.75;
+}
+
+.pf-carousel .carousel-caption {
+  bottom: 15%;
+  text-align: left;
+  left: 6%;
+  right: 6%;
+  max-width: 32rem;
+  background: rgba(29, 78, 69, 0.55);
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  border-left: 6px solid var(--pf-accent);
+}
+
+.pf-carousel .carousel-caption h2 {
+  color: #fff;
+  font-size: 2rem;
+}
+
+.pf-carousel .carousel-caption p {
+  color: #f4efe4;
+}
+
+/* --------------------------------------------------------------------------
+   6. Cartões de produtos e serviços
+   -------------------------------------------------------------------------- */
+.pf-card {
+  background-color: var(--pf-card-bg);
+  border: 1px solid var(--pf-border);
+  border-top: 4px solid var(--pf-primary);
+  border-radius: 0.5rem;
+  height: 100%;
+}
+
+.pf-card.categoria-racao { border-top-color: #7c9c52; }
+.pf-card.categoria-higiene { border-top-color: #4aa3c4; }
+.pf-card.categoria-brinquedos { border-top-color: var(--pf-accent); }
+
+.pf-card img {
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.pf-price {
+  font-family: var(--pf-font-display);
+  font-weight: 600;
+  font-size: 1.15rem;
+  color: var(--pf-primary-dark);
+}
+
+.pf-pill {
+  display: inline-block;
+  padding: 0.2rem 0.75rem;
+  border-radius: 999px;
+  background-color: var(--pf-primary);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+/* --------------------------------------------------------------------------
+   7. Botões de marca
+   -------------------------------------------------------------------------- */
+.btn-pf-primary {
+  background-color: var(--pf-primary);
+  border-color: var(--pf-primary);
+  color: #fff;
+  font-weight: 600;
+}
+
+.btn-pf-primary:hover,
+.btn-pf-primary:focus {
+  background-color: var(--pf-primary-dark);
+  border-color: var(--pf-primary-dark);
+  color: #fff;
+}
+
+.btn-pf-accent {
+  background-color: var(--pf-accent);
+  border-color: var(--pf-accent);
+  color: #1d1d1d;
+  font-weight: 700;
+}
+
+.btn-pf-accent:hover,
+.btn-pf-accent:focus {
+  background-color: var(--pf-accent-dark);
+  border-color: var(--pf-accent-dark);
+  color: #1d1d1d;
+}
+
+/* --------------------------------------------------------------------------
+   8. Formulário de cadastro e agendamento
+   -------------------------------------------------------------------------- */
+.pf-form-section {
+  background-color: var(--pf-card-bg);
+  border: 1px solid var(--pf-border);
+  border-radius: 0.75rem;
+  padding: 1.75rem;
+  margin-bottom: 1.75rem;
+}
+
+.pf-form-section legend {
+  font-family: var(--pf-font-display);
+  color: var(--pf-primary-dark);
+  font-weight: 600;
+  font-size: 1.15rem;
+  padding: 0;
+  width: auto;
+}
+
+.pf-required::after {
+  content: " *";
+  color: #b3261e;
+}
+
+/* Campo exibido/ocultado dinamicamente pelo JavaScript conforme a forma
+   de atendimento escolhida (tele-busca x entrega no local) */
+.pf-campo-condicional[hidden] {
+  display: none;
+}
+
+/* --------------------------------------------------------------------------
+   9. Rodapé (footer)
+   -------------------------------------------------------------------------- */
+footer.pf-footer {
+  background-color: var(--pf-primary-dark);
+  color: #f4efe4;
+  font-size: 0.9rem;
+}
+
+footer.pf-footer a {
+  color: #f4efe4;
+}
+
+footer.pf-footer a:hover {
+  color: var(--pf-accent);
+}
+
+/* --------------------------------------------------------------------------
+   10. Utilidades diversas
+   -------------------------------------------------------------------------- */
+.pf-section-title {
+  border-left: 6px solid var(--pf-accent);
+  padding-left: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+#pf-confirmacao:not(.d-none) {
+  border-left: 6px solid var(--pf-primary);
+}
+
+/* Respeita usuários que preferem menos movimento na tela */
+@media (prefers-reduced-motion: reduce) {
+  .carousel-item {
+    transition: none !important;
+  }
+}

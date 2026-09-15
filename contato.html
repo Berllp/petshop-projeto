@@ -4,63 +4,114 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contato - Pet Feliz Petshop</title>
+    <meta name="description" content="Fale com o Pet Feliz Petshop: endereço, telefone, e-mail e horário de atendimento.">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
 
+    <a class="skip-link" href="#conteudo-principal">Pular para o conteúdo principal</a>
+
     <header>
-        <h1>Pet Feliz Petshop</h1>
-        <p>Cuidando do seu melhor amigo com amor e dedicação desde 2010</p>
-        <nav>
-            <a href="index.html">Início</a> |
-            <a href="produtos.html">Produtos</a> |
-            <a href="servicos.html">Serviços</a> |
-            <a href="contato.html">Contato</a> |
-            <a href="ajuda.html">Ajuda</a>
+        <div class="topbar py-1">
+            <div class="container d-flex flex-wrap justify-content-between">
+                <span id="pf-saudacao">Seja bem-vindo(a) ao Pet Feliz.</span>
+                <span>Telefone: (51) 3222-4455 | <a href="mailto:contato@petfeliz.com.br">contato@petfeliz.com.br</a></span>
+            </div>
+        </div>
+
+        <nav class="navbar navbar-expand-lg navbar-pf" aria-label="Menu principal">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">🐾 Pet Feliz Petshop</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#menuPrincipal" aria-controls="menuPrincipal"
+                        aria-expanded="false" aria-label="Abrir/fechar menu de navegação">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="menuPrincipal">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+                        <li class="nav-item"><a class="nav-link" href="produtos.html">Produtos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="servicos.html">Serviços</a></li>
+                        <li class="nav-item"><a class="nav-link" href="agendamento.html">Agendamento</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
+                        <li class="nav-item"><a class="nav-link" href="ajuda.html">Ajuda</a></li>
+                    </ul>
+                </div>
+            </div>
         </nav>
-        <hr>
     </header>
 
-    <main>
-        <h2>Fale Conosco</h2>
+    <main id="conteudo-principal">
+        <div class="container my-5">
+            <h1 class="pf-section-title">Fale Conosco</h1>
 
-        <section>
-            <h3>Dados de Contato</h3>
-            <p>Endereço: Rua das Flores, 123 - Centro - Bagé/RS - CEP 96400-000</p>
-            <p>Telefone: (51) 3222-4455</p>
-            <p>WhatsApp: (51) 99999-8888</p>
-            <p>E-mail: contato@petfeliz.com.br</p>
-        </section>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="pf-card p-4">
+                        <h2 class="h5">Dados de contato</h2>
+                        <p class="mb-1">Endereço: Rua das Flores, 123 - Centro - Bagé/RS - CEP 96400-000</p>
+                        <p class="mb-1">Telefone: (51) 3222-4455</p>
+                        <p class="mb-1">WhatsApp: (51) 99999-8888</p>
+                        <p class="mb-0">E-mail: <a href="mailto:contato@petfeliz.com.br">contato@petfeliz.com.br</a></p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="pf-card p-4">
+                        <h2 class="h5">Horário de atendimento</h2>
+                        <p class="mb-1">Segunda a sexta-feira: 08h às 19h</p>
+                        <p class="mb-1">Sábado: 08h às 13h</p>
+                        <p class="mb-0">Domingo e feriados: fechado</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="pf-card p-4">
+                        <h2 class="h5">Redes sociais</h2>
+                        <p class="mb-1">Instagram: @petfelizpetshop</p>
+                        <p class="mb-0">Facebook: facebook.com/petfelizpetshop</p>
+                    </div>
+                </div>
+            </div>
 
-        <section>
-            <h3>Horário de Atendimento</h3>
-            <p>Segunda a sexta-feira: 08h às 19h</p>
-            <p>Sábado: 08h às 13h</p>
-            <p>Domingo e feriados: fechado</p>
-        </section>
-
-        <section>
-            <h3>Redes Sociais</h3>
-            <p>Instagram: @petfelizpetshop</p>
-            <p>Facebook: facebook.com/petfelizpetshop</p>
-        </section>
-
-        <p><em>Observação: o formulário de contato interativo será implementado na Fase 2 do projeto, com o uso de JavaScript.</em></p>
+            <p class="mt-4">
+                Quer agendar um banho ou uma tosa? Utilize nossa
+                <a href="agendamento.html">página de agendamento</a>.
+            </p>
+        </div>
     </main>
 
-    <footer>
-        <hr>
-        <p>Pet Feliz Petshop - CNPJ: 00.000.000/0001-00</p>
-        <p>Rua das Flores, 123 - Centro - Bagé/RS - CEP 96400-000</p>
-        <p>Telefone: (51) 3222-4455 | E-mail: contato@petfeliz.com.br</p>
-        <nav>
-            <a href="index.html">Início</a> |
-            <a href="produtos.html">Produtos</a> |
-            <a href="servicos.html">Serviços</a> |
-            <a href="contato.html">Contato</a> |
-            <a href="ajuda.html">Ajuda</a>
-        </nav>
-        <p>&copy; 2026 Pet Feliz Petshop. Projeto acadêmico desenvolvido para a Disciplina - Fase 1 (somente HTML).</p>
+    <footer class="pf-footer py-4 mt-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <h2 class="h5 text-white">Pet Feliz Petshop</h2>
+                    <p class="mb-1">CNPJ: 00.000.000/0001-00</p>
+                    <p class="mb-0">Rua das Flores, 123 - Centro - Bagé/RS - CEP 96400-000</p>
+                </div>
+                <div class="col-md-4">
+                    <h2 class="h5 text-white">Contato</h2>
+                    <p class="mb-1">Telefone: (51) 3222-4455</p>
+                    <p class="mb-0">E-mail: <a href="mailto:contato@petfeliz.com.br">contato@petfeliz.com.br</a></p>
+                </div>
+                <div class="col-md-4">
+                    <h2 class="h5 text-white">Navegação</h2>
+                    <nav aria-label="Links do rodapé">
+                        <a href="index.html">Início</a> ·
+                        <a href="produtos.html">Produtos</a> ·
+                        <a href="servicos.html">Serviços</a> ·
+                        <a href="agendamento.html">Agendamento</a> ·
+                        <a href="contato.html">Contato</a> ·
+                        <a href="ajuda.html">Ajuda</a>
+                    </nav>
+                </div>
+            </div>
+            <hr class="border-light">
+            <p class="mb-0 text-center">&copy; <span id="pf-ano">2026</span> Pet Feliz Petshop. Projeto acadêmico desenvolvido para a Disciplina - Fase 2.</p>
+        </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

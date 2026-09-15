@@ -4,99 +4,164 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Produtos - Pet Feliz Petshop</title>
+    <meta name="description" content="Conheça os produtos do Pet Feliz Petshop: ração, higiene e beleza, brinquedos e acessórios.">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
 
+    <a class="skip-link" href="#conteudo-principal">Pular para o conteúdo principal</a>
+
     <header>
-        <h1>Pet Feliz Petshop</h1>
-        <p>Cuidando do seu melhor amigo com amor e dedicação desde 2010</p>
-        <nav>
-            <a href="index.html">Início</a> |
-            <a href="produtos.html">Produtos</a> |
-            <a href="servicos.html">Serviços</a> |
-            <a href="contato.html">Contato</a> |
-            <a href="ajuda.html">Ajuda</a>
+        <div class="topbar py-1">
+            <div class="container d-flex flex-wrap justify-content-between">
+                <span id="pf-saudacao">Seja bem-vindo(a) ao Pet Feliz.</span>
+                <span>Telefone: (51) 3222-4455 | <a href="mailto:contato@petfeliz.com.br">contato@petfeliz.com.br</a></span>
+            </div>
+        </div>
+
+        <nav class="navbar navbar-expand-lg navbar-pf" aria-label="Menu principal">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">🐾 Pet Feliz Petshop</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#menuPrincipal" aria-controls="menuPrincipal"
+                        aria-expanded="false" aria-label="Abrir/fechar menu de navegação">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="menuPrincipal">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+                        <li class="nav-item"><a class="nav-link" href="produtos.html">Produtos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="servicos.html">Serviços</a></li>
+                        <li class="nav-item"><a class="nav-link" href="agendamento.html">Agendamento</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
+                        <li class="nav-item"><a class="nav-link" href="ajuda.html">Ajuda</a></li>
+                    </ul>
+                </div>
+            </div>
         </nav>
-        <hr>
     </header>
 
-    <main>
-        <h2>Nossos Produtos</h2>
-        <p>Confira abaixo os produtos disponíveis em nossas três categorias: Ração, Higiene e Beleza, e Brinquedos e Acessórios.</p>
+    <main id="conteudo-principal">
+        <div class="container my-5">
+            <h1 class="pf-section-title">Nossos Produtos</h1>
+            <p>Confira os produtos disponíveis em nossas três categorias: Ração, Higiene e Beleza, e Brinquedos e Acessórios.</p>
 
-        <section>
-            <h3>Categoria 1: Ração</h3>
+            <!-- Categoria 1: Ração -->
+            <section class="mb-5">
+                <h2 class="h4"><span class="pf-pill">Categoria 1</span> Ração</h2>
+                <div class="row g-4 mt-1">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="pf-card categoria-racao">
+                            <img src="https://picsum.photos/seed/racao1/400/260" class="w-100" alt="Pacote de ração Golden Fórmula para cães adultos, 15 quilos" width="400" height="260">
+                            <div class="p-3">
+                                <h3 class="h6">Ração Golden Fórmula Adulto 15kg</h3>
+                                <p class="small">Ração completa para cães adultos de porte médio e grande, rica em proteínas e vitaminas, promove pelagem saudável e boa digestão.</p>
+                                <p class="pf-price mb-0">R$ 189,90</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="pf-card categoria-racao">
+                            <img src="https://picsum.photos/seed/racao2/400/260" class="w-100" alt="Pacote de ração Premier para filhotes, 10 quilos" width="400" height="260">
+                            <div class="p-3">
+                                <h3 class="h6">Ração Premier Filhotes 10kg</h3>
+                                <p class="small">Ração formulada especialmente para filhotes, com nutrientes essenciais para o crescimento saudável e fortalecimento do sistema imunológico.</p>
+                                <p class="pf-price mb-0">R$ 149,90</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-            <article>
-                <h4>Ração Golden Fórmula Adulto 15kg</h4>
-                <img src="https://picsum.photos/seed/racao1/300/200" alt="Pacote de ração Golden Fórmula Adulto 15kg" width="300" height="200">
-                <p>Descrição: Ração completa para cães adultos de porte médio e grande, rica em proteínas e vitaminas, promove pelagem saudável e boa digestão.</p>
-                <p>Valor: R$ 189,90</p>
-            </article>
+            <!-- Categoria 2: Higiene e Beleza -->
+            <section class="mb-5">
+                <h2 class="h4"><span class="pf-pill">Categoria 2</span> Higiene e Beleza</h2>
+                <div class="row g-4 mt-1">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="pf-card categoria-higiene">
+                            <img src="https://picsum.photos/seed/higiene1/400/260" class="w-100" alt="Frasco de shampoo Pet Clean neutro, 500 mililitros" width="400" height="260">
+                            <div class="p-3">
+                                <h3 class="h6">Shampoo Pet Clean Neutro 500ml</h3>
+                                <p class="small">Shampoo neutro, hipoalergênico, indicado para cães e gatos de todas as idades e tipos de pelagem. Não resseca a pele.</p>
+                                <p class="pf-price mb-0">R$ 29,90</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="pf-card categoria-higiene">
+                            <img src="https://picsum.photos/seed/higiene2/400/260" class="w-100" alt="Frasco de perfume Pet Fresh, 100 mililitros" width="400" height="260">
+                            <div class="p-3">
+                                <h3 class="h6">Perfume Pet Fresh 100ml</h3>
+                                <p class="small">Perfume desenvolvido especialmente para pets, com fragrância suave e de longa duração, sem álcool na fórmula.</p>
+                                <p class="pf-price mb-0">R$ 24,90</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-            <article>
-                <h4>Ração Premier Filhotes 10kg</h4>
-                <img src="https://picsum.photos/seed/racao2/300/200" alt="Pacote de ração Premier para filhotes 10kg" width="300" height="200">
-                <p>Descrição: Ração formulada especialmente para filhotes, com nutrientes essenciais para o crescimento saudável e fortalecimento do sistema imunológico.</p>
-                <p>Valor: R$ 149,90</p>
-            </article>
-        </section>
-
-        <hr>
-
-        <section>
-            <h3>Categoria 2: Higiene e Beleza</h3>
-
-            <article>
-                <h4>Shampoo Pet Clean Neutro 500ml</h4>
-                <img src="https://picsum.photos/seed/higiene1/300/200" alt="Frasco de shampoo Pet Clean neutro 500ml" width="300" height="200">
-                <p>Descrição: Shampoo neutro, hipoalergênico, indicado para cães e gatos de todas as idades e tipos de pelagem. Não resseca a pele.</p>
-                <p>Valor: R$ 29,90</p>
-            </article>
-
-            <article>
-                <h4>Perfume Pet Fresh 100ml</h4>
-                <img src="https://picsum.photos/seed/higiene2/300/200" alt="Frasco de perfume Pet Fresh 100ml" width="300" height="200">
-                <p>Descrição: Perfume desenvolvido especialmente para pets, com fragrância suave e de longa duração, sem álcool na fórmula.</p>
-                <p>Valor: R$ 24,90</p>
-            </article>
-        </section>
-
-        <hr>
-
-        <section>
-            <h3>Categoria 3: Brinquedos e Acessórios</h3>
-
-            <article>
-                <h4>Bola de Borracha Resistente</h4>
-                <img src="https://picsum.photos/seed/brinquedo1/300/200" alt="Bola de borracha resistente para cães" width="300" height="200">
-                <p>Descrição: Bola de borracha atóxica e resistente a mordidas, ideal para brincadeiras e para ajudar na limpeza dos dentes do pet.</p>
-                <p>Valor: R$ 19,90</p>
-            </article>
-
-            <article>
-                <h4>Coleira Ajustável com Guia</h4>
-                <img src="https://picsum.photos/seed/brinquedo2/300/200" alt="Coleira ajustável com guia para cães" width="300" height="200">
-                <p>Descrição: Conjunto de coleira e guia ajustáveis, confeccionados em nylon reforçado, disponíveis em diversos tamanhos e cores.</p>
-                <p>Valor: R$ 39,90</p>
-            </article>
-        </section>
+            <!-- Categoria 3: Brinquedos e Acessórios -->
+            <section class="mb-5">
+                <h2 class="h4"><span class="pf-pill">Categoria 3</span> Brinquedos e Acessórios</h2>
+                <div class="row g-4 mt-1">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="pf-card categoria-brinquedos">
+                            <img src="https://picsum.photos/seed/brinquedo1/400/260" class="w-100" alt="Bola de borracha resistente para cães morderem e brincarem" width="400" height="260">
+                            <div class="p-3">
+                                <h3 class="h6">Bola de Borracha Resistente</h3>
+                                <p class="small">Bola de borracha atóxica e resistente a mordidas, ideal para brincadeiras e para ajudar na limpeza dos dentes do pet.</p>
+                                <p class="pf-price mb-0">R$ 19,90</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="pf-card categoria-brinquedos">
+                            <img src="https://picsum.photos/seed/brinquedo2/400/260" class="w-100" alt="Coleira ajustável com guia para cães, na cor marrom" width="400" height="260">
+                            <div class="p-3">
+                                <h3 class="h6">Coleira Ajustável com Guia</h3>
+                                <p class="small">Conjunto de coleira e guia ajustáveis, confeccionados em nylon reforçado, disponíveis em diversos tamanhos e cores.</p>
+                                <p class="pf-price mb-0">R$ 39,90</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
     </main>
 
-    <footer>
-        <hr>
-        <p>Pet Feliz Petshop - CNPJ: 00.000.000/0001-00</p>
-        <p>Rua das Flores, 123 - Centro - Bagé/RS - CEP 96400-000</p>
-        <p>Telefone: (51) 3222-4455 | E-mail: contato@petfeliz.com.br</p>
-        <nav>
-            <a href="index.html">Início</a> |
-            <a href="produtos.html">Produtos</a> |
-            <a href="servicos.html">Serviços</a> |
-            <a href="contato.html">Contato</a> |
-            <a href="ajuda.html">Ajuda</a>
-        </nav>
-        <p>&copy; 2026 Pet Feliz Petshop. Projeto acadêmico desenvolvido para a Disciplina - Fase 1 (somente HTML).</p>
+    <footer class="pf-footer py-4 mt-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <h2 class="h5 text-white">Pet Feliz Petshop</h2>
+                    <p class="mb-1">CNPJ: 00.000.000/0001-00</p>
+                    <p class="mb-0">Rua das Flores, 123 - Centro - Bagé/RS - CEP 96400-000</p>
+                </div>
+                <div class="col-md-4">
+                    <h2 class="h5 text-white">Contato</h2>
+                    <p class="mb-1">Telefone: (51) 3222-4455</p>
+                    <p class="mb-0">E-mail: <a href="mailto:contato@petfeliz.com.br">contato@petfeliz.com.br</a></p>
+                </div>
+                <div class="col-md-4">
+                    <h2 class="h5 text-white">Navegação</h2>
+                    <nav aria-label="Links do rodapé">
+                        <a href="index.html">Início</a> ·
+                        <a href="produtos.html">Produtos</a> ·
+                        <a href="servicos.html">Serviços</a> ·
+                        <a href="agendamento.html">Agendamento</a> ·
+                        <a href="contato.html">Contato</a> ·
+                        <a href="ajuda.html">Ajuda</a>
+                    </nav>
+                </div>
+            </div>
+            <hr class="border-light">
+            <p class="mb-0 text-center">&copy; <span id="pf-ano">2026</span> Pet Feliz Petshop. Projeto acadêmico desenvolvido para a Disciplina - Fase 2.</p>
+        </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
